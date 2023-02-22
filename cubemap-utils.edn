@@ -49,7 +49,7 @@
   (GFX.DrawQueue) >== .sky-sphere-queue
 
   (GFX.BuiltinMesh :Type BuiltinMeshType.Sphere) >= .sky-sphere-mesh
-  {:Mesh .sky-sphere-mesh} (GFX.Drawable) (GFX.Draw .sky-sphere-queue))
+  (Math.MatIdentity) (GFX.Drawable :Mesh .sky-sphere-mesh) (GFX.Draw .sky-sphere-queue))
 
 ; Renders a screen space sphere into a cubemap
 ; this can be used for applying effects on cubemaps
