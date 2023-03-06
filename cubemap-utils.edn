@@ -46,7 +46,7 @@
   .screen-pos (Shader.WriteGlobal "screenPosition"))
 
 (defshards setup-shared-sky-sphere-queue []
-  (GFX.DrawQueue) >== .sky-sphere-queue
+  (GFX.DrawQueue :AutoClear false) >== .sky-sphere-queue
 
   (GFX.BuiltinMesh :Type BuiltinMeshType.Sphere) >= .sky-sphere-mesh
   (Math.MatIdentity) (GFX.Drawable :Mesh .sky-sphere-mesh) (GFX.Draw .sky-sphere-queue))

@@ -46,7 +46,7 @@
  .transform (Math.MatMul .tmp-rot) (Math.MatMul .tmp-scale)
  (GFX.glTF :Path "assets/mascot.glb") >> .drawables
 
- (GFX.DrawQueue) >= .main-queue
+ (GFX.DrawQueue :AutoClear false) >= .main-queue
  .drawables (GFX.Draw .main-queue)
 
  (Float3 -6.0 10.0 2.5) (Math.Normalize) = .light-direction
